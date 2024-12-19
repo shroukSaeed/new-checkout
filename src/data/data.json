@@ -1,0 +1,11 @@
+{
+    "formData": {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "address": "",
+      "city": "",
+      "country": "",
+      "postalCode": ""
+    }
+  }

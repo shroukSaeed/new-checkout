@@ -1,0 +1,153 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-group-input {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  
+}
+
+.form-label {
+  color: rgb(165, 201, 249);
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.PhoneInputInput {
+  border: none;
+  background-color: #f3f7f7;
+  padding: 0.5rem;
+  border-radius: 2px;
+  max-height: 4rem;
+}
+
+.form-input {
+  padding: 0.65rem;
+  border: none;
+  background-color: #f3f7f7;
+  border-radius: 2px;
+  /* max-height: 5rem; */
+}
+
+.PhoneInputInput:focus,
+.form-input:focus {
+  outline: none;
+  background-color: #f3f7f7;
+}
+
+.form-group {
+  border: 1px solid #f3f7f7;
+  padding: 10px 5px;
+
+}
+
+.form-group img {
+  width: 3rem;
+  margin-inline: 0.5rem;
+}
+
+.secure-payment {
+  color: rgb(180, 188, 205);
+  font-size: 12px;
+}
+
+.address-one {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.input-width {
+width: 73%;
+}
+
+.input-width-nr {
+  width : 25%;
+}
+
+.address-two{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.inp-w{
+  width: 32%;
+}
+.form-payment{
+  width:100% ;
+}
+
+.card-holder{
+  width: 100%;
+}
+.card-number-group{
+width: 42%;
+}
+.pay{
+  width:18% ;
+}
+
+.mon-block{
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 10px; */
+
+
+}
+
+.month{
+  width: 150px;
+  height: 70px;
+  background-color: #f3f7f7;
+  color: rgb(46, 43, 43);
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.month:hover{
+  background-color: #e7f8f8;
+  border: 1px solid blue;
+}
+
+.submit-payment{
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(77, 77, 245);
+  color: white;
+  border-radius: 4px;
+  width: 100%;
+
+}
+.overview{
+  background-color: hsl(180, 6%, 97%);
+}
+
+
+@media (max-width: 450px) {
+  .inp-w ::placeholder{
+    font-size: 13px;
+  }
+
+  .form-input{
+    padding: 5px 10px;
+  }
+  
+}
