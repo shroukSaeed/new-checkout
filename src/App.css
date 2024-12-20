@@ -140,6 +140,14 @@ width: 42%;
   background-color: hsl(180, 6%, 97%);
 }
 
+.order-btn{
+  width: 100%;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom right, rgb(55, 0, 255), rgb(0, 225, 255));
+}
 
 @media (max-width: 450px) {
   .inp-w ::placeholder{
