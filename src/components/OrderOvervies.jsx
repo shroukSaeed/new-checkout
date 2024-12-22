@@ -6,9 +6,9 @@ import Switch from './Switch'
 const OrderOvervies = ({ sessionCount, totalCost, objectForm }) => {
     const [month, setMonth] = useState(0);
 
-    const numberOfMon = {6:'6Mon', 9:'9Mon', 12:'12Mon',18: '18Mon', 24:'24Mon',36: '36Mon'}
+    const numberOfMon = {6:'6 Months', 9:'9 Months', 12:'12 Months',18: '18 Months', 24:'24 Months',36: '36 Months'}
     return (
-        <div className='p-3 overview'>
+        <div className='p-5 overview'>
             <h5>Order Overview</h5>
             {/* عدد الشهور */}
             <div className='mon-block' >

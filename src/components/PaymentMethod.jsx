@@ -58,6 +58,7 @@ const PaymentMethod = ({ paymentMethod, onChange }) => {
                     checked={paymentMethod === 'sepa'}
                 />
                 <img
+                className="img-1"
                     src='https://smartstore.com/media/6868/content/sepa_21x9.png?size=1024'
                     alt='SEPA'
                 />
@@ -83,7 +84,9 @@ const PaymentMethod = ({ paymentMethod, onChange }) => {
                     checked={paymentMethod === 'visa'}
                 />
                 <img
-                    src='https://financialit.net/sites/default/files/visa-mastercard-amex_0.png'
+                className="img-2"
+                    // src='https://financialit.net/sites/default/files/visa-mastercard-amex_0.png'
+                    src='https://help.zazzle.com/hc/article_attachments/360010513393'
                     alt='VISA'
                 />
                 {paymentMethod === 'visa' && (

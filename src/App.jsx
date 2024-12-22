@@ -19,13 +19,13 @@ function App() {
 
     return (
         <>
-            <Container className='p-5'>
-                <Row>
-                    <Col lg={6} md={12}>
-                        <Heading />
+            <Container  className='custom'>
+                <Row className='bg-w shade'>
+                    <Col lg={6} md={12} className='p-5 bg-w'>
+                        <Heading  />
                         <FormInput objectForm={objectForm} setObjectForm={setObjectForm} updateOrderDetails={updateOrderDetails} />
                     </Col>
-                    <Col lg={5} md={12}>
+                    <Col lg={6} md={12} className='p-0' >
                         <OrderOvervies objectForm={objectForm} sessionCount={sessionCount} totalCost={totalCost} />
                         {/* <button onClick={e => console.log(objectForm)}>Ok</button> */}
                     </Col>

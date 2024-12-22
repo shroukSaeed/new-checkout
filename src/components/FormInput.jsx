@@ -16,7 +16,7 @@ const FormInput = ({objectForm, updateOrderDetails , setObjectForm}) => {
         city: '',
         country: '',
         session: '',
-        paymentMethod: 'sepa',
+        paymentMethod: '',
     });
 
     const pricePerSession = 28;
@@ -50,7 +50,7 @@ const FormInput = ({objectForm, updateOrderDetails , setObjectForm}) => {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div className="form-group-input">
+                <div className="form-group-input bg-w">
                     <h6 className="form-label" htmlFor="phone1">
                         Login phone number (preferably the student's)
                     </h6>

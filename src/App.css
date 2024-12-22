@@ -3,7 +3,20 @@
   margin: 0px;
   box-sizing: border-box;
 }
+#root{
+  background-color: rgb(248, 252, 252);
+  padding: 5%;
+}
+.bg-w{
+  background-color: #ffffff;
+}
+.custom{
+  padding: 5rem !important;
+}
 
+.shade{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .headline {
   display: flex;
   flex-direction: column;
@@ -29,7 +42,7 @@
 
 .PhoneInputInput {
   border: none;
-  background-color: #f3f7f7;
+  background-color: hsla(180, 7%, 97%, 0.932);
   padding: 0.5rem;
   border-radius: 2px;
   max-height: 4rem;
@@ -38,7 +51,7 @@
 .form-input {
   padding: 0.65rem;
   border: none;
-  background-color: #f3f7f7;
+  background-color: hsla(180, 7%, 97%, 0.932);
   border-radius: 2px;
   /* max-height: 5rem; */
 }
@@ -50,13 +63,17 @@
 }
 
 .form-group {
-  border: 1px solid #f3f7f7;
+  border: 1px solid hsla(180, 7%, 97%, 0.932);
   padding: 10px 5px;
 
 }
 
-.form-group img {
-  width: 3rem;
+.img-1 {
+  width: 4rem;
+  margin-inline: 0.5rem;
+}
+.img-2 {
+  width: 8rem;
   margin-inline: 0.5rem;
 }
 
@@ -104,18 +121,15 @@ width: 42%;
 }
 
 .mon-block{
-  display: flex;
-  flex-wrap: wrap;
-  /* gap: 10px; */
-
-
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 3px;
 }
 
 .month{
-  width: 150px;
-  height: 70px;
-  background-color: #f3f7f7;
-  color: rgb(46, 43, 43);
+  padding: 20px;
+  background-color: #ffffff;
+  color: rgb(113, 105, 105);
   border: 1px solid white;
   display: flex;
   justify-content: center;
@@ -126,7 +140,10 @@ width: 42%;
   background-color: #e7f8f8;
   border: 1px solid blue;
 }
-
+.month:active{
+  background-color: #e7f8f8;
+  border: 1px solid blue;
+}
 .submit-payment{
   padding: 10px 20px;
   border: none;
@@ -150,12 +167,19 @@ width: 42%;
 }
 
 @media (max-width: 450px) {
+  .custom{
+    padding: 0 !important;
+  }
   .inp-w ::placeholder{
     font-size: 13px;
   }
 
   .form-input{
     padding: 5px 10px;
+  }
+  .month{
+    font-size: 12px;
+    white-space: nowrap;
   }
   
 }
