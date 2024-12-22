@@ -68,7 +68,7 @@ const PaymentMethod = ({ paymentMethod, onChange }) => {
                             cardData={sepaData} 
                             handleChange={(e) => handleChange(e, 'sepa')} 
                         />
-                        <button className="submit-payment" type='submit'>Submit SEPA</button>
+                        {/* <button className="submit-payment" type='submit'>Submit SEPA</button> */}
                     </form>
                 )}
             </div>
@@ -95,7 +95,7 @@ const PaymentMethod = ({ paymentMethod, onChange }) => {
                             cardData={visaData} 
                             handleChange={(e) => handleChange(e, 'visa')} 
                         />
-                        <button className="submit-payment" type='submit'>Submit VISA</button>
+                        {/* <button className="submit-payment" type='submit'>Submit VISA</button> */}
                     </form>
                 )}
             </div>

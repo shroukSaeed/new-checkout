@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 
-function SwitchExample({ totalCost }) {
+function SwitchExample({ totalCost, isSessionSelected}) {
+
     const [isChecked, setIsChecked] = useState(false);
 
     const handleSwitchChange = (e) => {
         setIsChecked(e.target.checked);
         if (e.target.checked) {
             console.log("Pay in advance selected!");
-            console.log(totalCost * .05)
-            console.log(totalCost - totalCost * .05)
+            console.log("Discount amount"+ totalCost * .05)
+            console.log("total after discount " + (totalCost - totalCost * .05))
         } else {
             console.log("Pay in advance deselected!");
         }
@@ -21,6 +22,7 @@ function SwitchExample({ totalCost }) {
                 type="switch"
                 id="custom-switch"
                 label="Pay in advance - EXTRA 5% DISCOUNT"
+                disabled={!isSessionSelected} 
                 checked={isChecked}
                 onChange={handleSwitchChange}
             />

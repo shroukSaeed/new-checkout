@@ -1,12 +1,12 @@
 import { useState } from "react";
-import PhoneInput from "react-phone-number-input"; 
+import PhoneInput from "react-phone-number-input";
 import 'react-phone-number-input/style.css';
 
 import PaymentMethod from "./PaymentMethod";
 
-const FormInput = ({objectForm, updateOrderDetails , setObjectForm}) => {
-     const [phone1, setPhone1] = useState('');
-     const [phone2, setPhone2] = useState('');
+const FormInput = ({ objectForm, updateOrderDetails, setObjectForm, onSessionChange }) => {
+    const [phone1, setPhone1] = useState('');
+    const [phone2, setPhone2] = useState('');
     const [formData, setFormData] = useState({
         email: '',
         name: '',
@@ -27,21 +27,23 @@ const FormInput = ({objectForm, updateOrderDetails , setObjectForm}) => {
                 ...prev,
                 [e.target.name]: e.target.value
             };
-            setObjectForm({...objectForm,[e.target.name]: e.target.value})
+            setObjectForm({ ...objectForm, [e.target.name]: e.target.value })
             if (e.target.name === "session") {
-                const sessions = parseInt(e.target.value, 10) || 0; 
+                const sessions = parseInt(e.target.value, 10) || 0;
                 const cost = sessions * pricePerSession;
                 updateOrderDetails(sessions, cost);
+                onSessionChange(sessions > 0);
+                console.log(`Selected sessions: ${sessions}, Cost: ${cost}`);
             }
-    
+
             return updatedFormData;
         });
     };
-    
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setObjectForm({...formData})
+        setObjectForm({ ...formData })
         console.log("Form Data:", formData);
         console.log("Phone 1:", phone1);
         console.log("Phone 2:", phone2);
@@ -58,8 +60,8 @@ const FormInput = ({objectForm, updateOrderDetails , setObjectForm}) => {
                         className="PhoneInputInput"
                         name="phone1"
                         value={phone1}
-                        onChange={value=>{
-                            setObjectForm({...objectForm,phone1:value})
+                        onChange={value => {
+                            setObjectForm({ ...objectForm, phone1: value })
                         }}
                     />
                 </div>
@@ -71,8 +73,8 @@ const FormInput = ({objectForm, updateOrderDetails , setObjectForm}) => {
                         className="PhoneInputInput"
                         name="phone2"
                         value={phone2}
-                        onChange={value=>{
-                            setObjectForm({...objectForm,phone2:value})
+                        onChange={value => {
+                            setObjectForm({ ...objectForm, phone2: value })
                         }}
                     />
                 </div>

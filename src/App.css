@@ -3,20 +3,24 @@
   margin: 0px;
   box-sizing: border-box;
 }
-#root{
+
+#root {
   background-color: rgb(248, 252, 252);
   padding: 5%;
 }
-.bg-w{
+
+.bg-w {
   background-color: #ffffff;
 }
-.custom{
-  padding: 5rem !important;
+
+.custom {
+  padding: 3rem 8rem !important;
 }
 
-.shade{
+.shade {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .headline {
   display: flex;
   flex-direction: column;
@@ -29,7 +33,7 @@
   flex-direction: column;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  
+
 }
 
 .form-label {
@@ -72,6 +76,7 @@
   width: 4rem;
   margin-inline: 0.5rem;
 }
+
 .img-2 {
   width: 8rem;
   margin-inline: 0.5rem;
@@ -90,61 +95,70 @@
 }
 
 .input-width {
-width: 73%;
+  width: 73%;
 }
 
 .input-width-nr {
-  width : 25%;
+  width: 25%;
 }
 
-.address-two{
+.address-two {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
   width: 100%;
 }
-.inp-w{
+
+.inp-w {
   width: 32%;
 }
-.form-payment{
-  width:100% ;
-}
 
-.card-holder{
+.form-payment {
   width: 100%;
 }
-.card-number-group{
-width: 42%;
-}
-.pay{
-  width:18% ;
+
+.card-holder {
+  width: 100%;
 }
 
-.mon-block{
+.card-number-group {
+  width: 42%;
+}
+
+.pay {
+  width: 18%;
+}
+
+.mon-block {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 3px;
 }
 
-.month{
-  padding: 20px;
+.month {
+  padding: 20px 7px;
+  white-space: nowrap;
   background-color: #ffffff;
-  color: rgb(113, 105, 105);
+  color: rgb(137, 134, 134);
+  font-size: 14px;
   border: 1px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.month:hover{
+
+.month:hover {
   background-color: #e7f8f8;
   border: 1px solid blue;
 }
-.month:active{
+
+.month:active {
   background-color: #e7f8f8;
   border: 1px solid blue;
 }
-.submit-payment{
+
+.submit-payment {
   padding: 10px 20px;
   border: none;
   background-color: rgb(77, 77, 245);
@@ -153,33 +167,65 @@ width: 42%;
   width: 100%;
 
 }
-.overview{
+
+.overview-col {
   background-color: hsl(180, 6%, 97%);
 }
 
-.order-btn{
+.order-btn {
   width: 100%;
   color: white;
   border: none;
   padding: 10px 0;
   border-radius: 5px;
-  background-image: linear-gradient(to bottom right, rgb(55, 0, 255), rgb(0, 225, 255));
+  background-image: linear-gradient(to left, rgb(24, 131, 218), rgb(107, 24, 209));
+  border: 2px solid grey;
+}
+
+td {
+  height: 40px;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.total {
+  font-size: 19px;
+}
+
+.align {
+  text-align: right;
+  font-weight: 500;
+}
+
+.first-col {
+  font-weight: 500;
+  color: rgb(166, 195, 206);
+}
+
+.discount {
+  color: rgb(52, 206, 52);
 }
 
 @media (max-width: 450px) {
-  .custom{
-    padding: 0 !important;
+  .custom {
+    padding: 1rem !important;
   }
-  .inp-w ::placeholder{
+
+  .inp-w ::placeholder {
     font-size: 13px;
   }
 
-  .form-input{
+  .form-input {
     padding: 5px 10px;
   }
-  .month{
-    font-size: 12px;
+
+  .month {
+    font-size: 11px;
     white-space: nowrap;
   }
-  
+
 }
